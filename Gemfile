@@ -6,7 +6,16 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 
+group :development, :test do
+  gem 'rspec', '2.8.0'
+  gem "rspec-rails", "~> 2.6"
+  gem 'factory_girl', '2.5.0'
+  gem 'guard', '1.0.0'
+  gem 'guard-rspec', '0.6.0'
+  gem 'mocha', '0.10.3'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,17 +27,6 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
   # Pretty printed test output
